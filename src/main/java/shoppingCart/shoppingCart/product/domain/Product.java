@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import shoppingCart.shoppingCart.user.domain.User;
+import shoppingCart.shoppingCart.user.domain.Customer;
 
 @Entity
 @AllArgsConstructor
@@ -19,7 +19,7 @@ public class Product {
     int quantity;
     @ManyToOne
     @JoinColumn(name = "user_id")
-    User user;
+    Customer customer;
     @OneToOne
     @JoinColumn(name = "category_id")
     ProductCategory category;
