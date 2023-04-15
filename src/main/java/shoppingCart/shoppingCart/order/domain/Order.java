@@ -25,4 +25,8 @@ public class Order {
     @JoinColumn(name = "payment_id")
     Payment payment;
     List<OrderLine> orderLines;
+
+    public Order(Double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
 }

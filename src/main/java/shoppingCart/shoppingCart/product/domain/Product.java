@@ -23,4 +23,10 @@ public class Product {
     @OneToOne
     @JoinColumn(name = "category_id")
     ProductCategory category;
+
+    public Product(String name, Double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
 }

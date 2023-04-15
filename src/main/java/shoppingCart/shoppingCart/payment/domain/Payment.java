@@ -28,4 +28,9 @@ public class Payment {
     @OneToOne
     @JoinColumn(name = "payment_type_id")
     PaymentType paymentType;
+
+    public Payment(Date date, Double amount) {
+        this.date = date;
+        this.amount = amount;
+    }
 }
