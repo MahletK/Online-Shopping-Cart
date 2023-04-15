@@ -14,7 +14,7 @@ import java.util.Collection;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class User {
+public class Customer {
     @Id
     @GeneratedValue
     Long id;
@@ -28,7 +28,7 @@ public class User {
     @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private Collection<Role> roles;
 
-    public User(Long id, String userName, String password, String email, String phoneNumber, Address address) {
+    public Customer(Long id, String userName, String password, String email, String phoneNumber, Address address) {
         this.id = id;
         this.userName = userName;
         this.password = password;

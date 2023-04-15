@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import shoppingCart.shoppingCart.order.domain.Order;
-import shoppingCart.shoppingCart.user.domain.User;
+import shoppingCart.shoppingCart.user.domain.Customer;
 
 import java.util.Date;
 
@@ -24,7 +24,7 @@ public class Payment {
     Order order;
     @OneToOne
     @JoinColumn(name = "user_id")
-    User user;
+    Customer customer;
     @OneToOne
     @JoinColumn(name = "payment_type_id")
     PaymentType paymentType;
